@@ -65,7 +65,6 @@ class Calculator {
         return;
     }
     this.currentOperand = computation;
-
     this.operation = undefined;
     this.previousOperand = "";
   }
@@ -92,6 +91,11 @@ operationButtons.forEach((button) => {
 
 equalsButton.addEventListener("click", (button) => {
   calculator.compute();
+  calculator.updateDisplay();
+});
+
+allClearButton.addEventListener("click", (button) => {
+  calculator.clear();
   calculator.updateDisplay();
 });
 
